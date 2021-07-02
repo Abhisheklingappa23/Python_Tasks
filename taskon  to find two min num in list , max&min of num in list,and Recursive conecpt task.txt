@@ -1,0 +1,198 @@
+===========================================================================================
+---------take a input as a list of numbers from user atleast 8-10 numbers and find the two least numbers and add them and give the output for that handle exceptions
+
+try:
+    a= []
+    count = 1
+    while (count<10):
+        usr = int(input("enter for  num{}= ".format(count)))
+        a.append(usr)
+        count=count+1
+
+    print("the given list of numbers are ",a)
+    b = min(a)
+    c = b
+    x = []
+    x.append(c)
+    a.remove(min(a))
+    d= min(a)
+    print("the least numbers in the list are {} and {}  ".format(c,d))
+    x.append(d)
+    y = c+d
+
+    print("the sum of the two least numbers = ",y)
+
+except ValueError:
+    print("please enter numbers only")
+
+
+OUTPUT-
+
+enter for  num1= 52
+6enter for  num2= 3
+enter for  num3= 26
+enter for  num4= 15
+enter for  num5= 88
+enter for  num6= 88
+enter for  num7= 96
+enter for  num8= 100
+enter for  num9= 58
+the given list of numbers are  [52, 3, 26, 15, 88, 88, 96, 100, 58]
+the least numbers in the list are 3 and 15  
+the sum of the two least numbers =  18
+
+Process finished with exit code 0
+
+
+---------------------------------------------------------------------------------------------------------------------------
+
+--- take a input as a list of numbers from user atleast 8-10 numbers and find the one least number and one maximum and add them and give the output---------------
+
+try:
+    a= []
+    count = 1
+    while (count<10):
+        usr = int(input("enter for  num{}= ".format(count)))
+        a.append(usr)
+        count=count+1
+
+    print("the given list of numbers are ",a)
+    b = min(a)
+    c = b
+    x = []
+    x.append(c)
+  #  a.remove(min(a))
+    d= max(a)
+    print("the least number in the list is  {} and the large number in the list is {}  ".format(c,d))
+    x.append(d)
+    y = c+d
+
+    print("the sum of the that two  numbers = ",y)
+
+except ValueError:
+    print("please enter numbers only")
+finally:
+    print("End of the given task go for next")
+
+OUTPUT-
+enter for  num1= 15
+enter for  num2= 23
+enter for  num3= 63
+enter for  num4= 98
+enter for  num5= 400
+enter for  num6= 78
+enter for  num7= 95
+enter for  num8= 633
+enter for  num9= 18
+the given list of numbers are  [15, 23, 63, 98, 400, 78, 95, 633, 18]
+the least number in the list is  15 and the large number in the list is 633  
+the sum of the that two  numbers =  648
+End of the given task go for next
+
+Process finished with exit code 0
+--------------------------------------------------------------------------------------------------------------------------
+
+----------------- Factorial----------------------------------------------------
+
+def fact(num):
+    if (num==1):
+        return 1
+    elif (num==2):
+        return 2
+    else:
+        return num*fact(num-1)
+print(fact(5))
+
+OUTPUT-
+120
+
+Process finished with exit code 0
+-------------------------------------------------------------------------
+--------------------factorial without using function----------------------
+
+import math
+def factorial(n):
+    return(math.factorial(n))
+
+print(factorial(5))
+
+OUTPUT-
+120
+
+Process finished with exit code 0
+------------------------------------------------------------------------------
+
+---------Fibonacci----------------------------------------
+def fibona(num):
+    if (num<=1):
+        return num
+    else:
+        #print(fibona(num-1)+fibona(num-2))
+        return fibona(num-1)+fibona(num-2)
+print(fibona(8))
+
+OUTPUT-
+
+21
+
+Process finished with exit code 0
+------------------------------------------------
+def fibona(num):
+    if (num<=1):
+        return num
+    else:
+        return fibona(num-1)+fibona(num-2)
+
+for i in range(1,11):
+    print('for num',i,':',fibona(i))
+
+OUTPUT-
+for num 1 : 1
+for num 2 : 1
+for num 3 : 2
+for num 4 : 3
+for num 5 : 5
+for num 6 : 8
+for num 7 : 13
+for num 8 : 21
+for num 9 : 34
+for num 10 : 55
+
+Process finished with exit code 0
+===============================================================
+---------------------------------------------------------------------------------------------------------------------------
+
+-- Using try and except block , write a code which take input from user and check whether that number is divisible by 2 or not------------------------------
+
+try:
+
+    def numd(num):
+        if (num/2):
+            return "number is divisible by '2' "
+        else:
+            return "number is not divisible by '2' "
+
+    x = int(input("enter the number"))
+    print(numd(x))
+except ZeroDivisionError:
+    print("please use the number rather than zero to avoid infinity ")
+except ValueError:
+    print("enter the numbers only ")
+finally:
+    print("end of the task go for next ")
+
+OUTPUT-
+enter the number20
+number is divisible by '2' 
+end of the task go for next 
+
+Process finished with exit code 0
+---------------------------------------------------------------------------
+OUTPUT- For the same above code 
+enter the number0
+number is not divisible by '2' 
+end of the task go for next 
+
+Process finished with exit code 0
+
+----------------------------------------------------------------------------------------------------------------------------------
