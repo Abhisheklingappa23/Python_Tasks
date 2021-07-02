@@ -1,0 +1,106 @@
+======================task on list comphresion and palindrome======================
+
+---To  build a list using list comprehension where the data you have should be stored in tuples or sets--------------------
+
+hup = "VIRATKHOLI"
+hum = ()
+ls = list(hum)
+my_list = [ i for i in hup]
+ls.append(my_list)
+ts = tuple(ls)
+print(ts)
+
+----------------------
+output-
+
+(['V', 'I', 'R', 'A', 'T', 'K', 'H', 'O', 'L', 'I'],)
+
+Process finished with exit code 0
+
+=========================================================================
+
+#hup = "VIRATKHOLI"
+hum = ()
+ls = list(hum)
+my_list = [ i for i in range(11)]
+ls.append(my_list)
+ts = tuple(ls)
+print(ts)
+
+------------------------------------
+output-
+
+([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],)
+
+Process finished with exit code 0
+
+=======================================================================================
+
+sto = ()
+ls = list(sto)
+my_list = [i for i in range(0,17) if i%2==0 ]
+ls.append(my_list)
+vs = tuple(ls)
+print(vs)
+
+-----------------------------------------
+output-
+
+([0, 2, 4, 6, 8, 10, 12, 14, 16],)
+
+Process finished with exit code 0
+==============================================================================
+
+================================Task on palindrome==========================================
+
+x=input(("Enter a character:"))
+alphachar = ""
+
+for char in x:
+      if char .isalpha():
+            alphachar += char
+print("the given  character after removing special character : ",alphachar)
+if(alphachar==alphachar[::-1]):
+      print("The  given character  {} is  a palindrome".format(alphachar))
+else:
+      print("Not a palindrome")
+
+-----------------------------------------------------------
+
+output-
+
+Enter a character:mom*&^%$#
+the given  character after removing special character :  mom
+The  given character  mom is  a palindrome
+
+Process finished with exit code 0
+--------------------------------------------------------
+
+Enter a character:po(*&^^$#@p
+the given  character after removing  special character :  pop
+The  given character  pop is  a palindrome
+
+Process finished with exit code 0
+
+-------------------------------------------------------
+
+Enter a character: mada(*&^%$$#@<m
+the given  character after removing  special character :  madam
+The  given character  madam is  a palindrome
+
+Process finished with exit code 0
+-------------------------------------------------------------------
+
+Enter a character:nay&*()_+&^%$#@!an
+the given  character after removing  special character :  nayan
+The  given character  nayan is  a palindrome
+
+Process finished with exit code 0
+-----------------------------------------------------------------------------
+Enter a character:malay(*&^%$#@!alam
+the given  character after removing  special character :  malayalam
+The  given character  malayalam is  a palindrome
+
+Process finished with exit code 0
+
+=========================================================================================================
