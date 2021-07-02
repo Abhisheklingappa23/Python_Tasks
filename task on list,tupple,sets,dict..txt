@@ -1,0 +1,253 @@
+
+==============================TASK simple calculator======================================
+import math
+print("modren calulator:\n ")
+
+num1 = int(input("enter the number: "))
+num2 = int(input("enter the number: "))
+
+addition = num1 + num2
+subtraction = num1 - num2
+multiplication  = num1*num2
+divison = num1/num2
+expo = num1**num2
+logi = True and  False
+logi1 = False or True
+logi2 = not False
+rs = num1>>2
+ls = num1<<1
+root = math.sqrt(num1)
+print("addition of num1&num2 is: ",addition)
+print("subtraction of num1&num2 is: ",subtraction)
+print("mul of num1&num2 is: ",multiplication)
+print(" divison of num1&num2 is: ",divison)
+print("power  of num1 with num2 is: ",expo)
+print("AND OF is  ",logi)
+print(" OR of is ",logi1)
+print("NOT of  is : ",logi2)
+print("left shift  of num1 is: ",ls)
+print("right  shift  of num1 is: ",rs)
+print("Square root of num1 is: ",root)
+
+OUTPUT 
+modren calulator:
+ 
+enter the number: 2
+enter the number: 1
+addition of num1&num2 is:  3
+subtraction of num1&num2 is:  1
+mul of num1&num2 is:  2
+ divison of num1&num2 is:  2.0
+power  of num1 with num2 is:  2
+AND OF is   False
+ OR of is  True
+NOT of  is :  True
+left shift  of num1 is:  4
+right  shift  of num1 is:  0
+Square root of num1 is:  1.4142135623730951
+
+Process finished with exit code 0
+
+============================LIST IN LIST ===========================================
+l1 = [10,20,[30,40,[50 ,60],80],90,100]
+
+l1[2][2].insert(2,70)
+print("the inserted number for l1 is ",l1)
+
+l2 = [1,2,[3,4,5,6,7,8],11,12]
+l2[2].insert(6,[9,10])
+print("the inserted number for l2 is",l2)
+
+=============================================================================================================
+=========================TASK -SETS==========================================================================
+
+set1 = { 2,3,4,56,8,9,10,'python'}
+set2 = {3,4,10,23.5,44.567,'programming','python'}
+
+set3 = set1.union(set2)
+set4 = set1.intersection(set2)
+set5 = set1.difference(set2)
+set6 = set1.symmetric_difference(set2)
+print("the union of set1 with set2 is ",set3)
+print("the intersection of set1 with set2 is",set4)
+print("the diffrence of set1 with set2 is",set5)
+print("the symmetric-diffrence of set1 with set2 is",set6)
+
+OUTPUT
+the inserted number for l1 is  [10, 20, [30, 40, [50, 60, 70], 80], 90, 100]
+the inserted number for l2 is [1, 2, [3, 4, 5, 6, 7, 8, [9, 10]], 11, 12]
+the union of set1 with set2 is  {2, 3, 4, 8, 9, 10, 44.567, 'python', 23.5, 56, 'programming'}
+the intersection of set1 with set2 is {10, 3, 4, 'python'}
+the diffrence of set1 with set2 is {8, 9, 2, 56}
+the symmetric-diffrence of set1 with set2 is {2, 8, 9, 44.567, 23.5, 56, 'programming'}
+
+Process finished with exit code 0
+====================================================================================================================
+
+============================================= TASK ON Dictionarires====================================================================
+dict5 = {
+    'may_batch':{
+        'Student':{
+            "Name": "Mike",
+            "marks":{
+            'python': 95,
+            'math': 88,
+            'full stack' : 90
+            }
+     }
+    }
+}
+name = dict5['may_batch']['Student']['Name']
+Marks = dict5['may_batch']['Student']['marks']['math']
+my_name = dict5['may_batch']['Student']['Name']='Abhi'
+scim = dict5['may_batch']['Student']['marks']['Science']=80
+engm = dict5['may_batch']['Student']['marks']['English']=93
+print("Accesed 1st name is ",name)
+print("Accesed maths mark is",Marks)
+print("changed name is",my_name)
+print("Added sci is",scim)
+print("Added eng is ",engm)
+print("The Updated Dictionary is ",dict5)
+
+
+OUTPUT-
+
+Accesed 1st name is  Mike
+Accesed maths mark is 88
+changed name is Abhi
+Added sci is 80
+Added eng is  93
+The Updated Dictionary is  {'may_batch': {'Student': {'Name': 'Abhi', 'marks': {'python': 95, 'math': 88, 'full stack': 90, 'Science': 80, 'English': 93}}}}
+
+Process finished with exit code 0
+==================================================================================================================================================================================
+
+
+========================= TASK Control statments - calculator using control statments====================================================================================================
+
+number1 = int(input("Enter the number1: "))
+number2 = int(input("Enter the number2: "))
+choice = int(input("enter the choice: "))
+
+if choice == 1:
+    print("addition of number1 and number2 is" ,number1+number2)
+elif choice ==2:
+    print("Subbtraction of number1 and number2 is ",number1-number2)
+elif choice ==3:
+    print("multiplication of number1 and number2 is ",number1*number2)
+elif choice ==4:
+    print("divison of number1 and number2 is ",number1/number2)
+else:
+    print("The entered choice is invalid ")
+
+
+OUTPUT-
+Enter the number1: 12
+Enter the number2: 6
+enter the choice: 1
+addition of number1 and number2 is 18
+
+Process finished with exit code 0
+
+Enter the number1: 24
+Enter the number2: 12
+enter the choice: 2
+Subbtraction of number1 and number2 is  12
+
+Process finished with exit code 0
+
+Enter the number1: 12
+Enter the number2: 2
+enter the choice: 3
+multiplication of number1 and number2 is  24
+
+Process finished with exit code 0
+
+Enter the number1: 24
+Enter the number2: 12
+enter the choice: 4
+divison of number1 and number2 is  2.0
+
+Process finished with exit code 0
+========================================================================================================================
+
+=========================================TASK ON LOOPS=============================================================================
+
+===================================================================
+To print numbers from 10 to 1 by using while loop
+count = 10
+while count >0:
+    print(count)
+    count=count-1
+
+
+OUTPUT-
+10
+9
+8
+7
+6
+5
+4
+3
+2
+1
+
+Process finished with exit code 0
+=====================================================================
+perform itterations of  tupple, set and dictionary
+
+x = (51,12,56,5.63,False)
+
+for i in x:
+    print(i)
+
+OUTPUT-
+51
+12
+56
+5.63
+False
+
+Process finished with exit code 0
+
+-----------------------------------------------------------------
+z = {'a',12,True,568,-968}
+for i in z:
+    print(i)
+
+OUTPUT-
+True
+12
+a
+568
+-968
+
+Process finished with exit code 0
+-------------------------------------------------------------
+h = {
+    "a": 125,
+    "b": 258,
+    "c": 962
+}
+for i in h:
+    print(i)
+
+OUTPUT-
+a
+b
+c
+
+Process finished with exit code 0
+=================================================================================================
+
+
+
+
+
+
+
+
+
+
+
