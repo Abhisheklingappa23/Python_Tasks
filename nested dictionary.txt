@@ -1,0 +1,37 @@
+dic = {
+    "student":{
+        "Gate":{
+            "higher_stud":{
+                "collegename":"NIT",
+                "Stayfund":15000,
+                "hostelreq":True
+            },
+            "publicsectorjob":{
+                "Railway":{
+                    "position1":"AE",
+                    "position2":"JE",
+                    "position3":"AEE"
+                },
+                "oilcomp":{
+                    "indianoil":"TN",
+                    "HP":"AP",
+                    "Bhart":"UP"
+                }
+
+            }
+        },
+        "state_exam":{
+            "Govtcollege_fees":100000,
+            "privatecollege_fees":200000
+        }
+    },
+    "Employee":{
+        "Engineer":"yes",
+        "doctors":"Yes",
+        "proffessor":"Yes"
+    }
+
+}
+vb = dic["student"].values()
+print(vb)
+
