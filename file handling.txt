@@ -1,0 +1,9 @@
+#file = open("ak.txt","x") # to create the file 
+
+#file = open("ak.txt","r") # to read the file 
+file = open("ak.txt","a") # to append the data 
+#file = open("ak.txt","w") # to write data by erasing previous data
+#file.write("hello brother this my program on file handling ") #  appended the data in txt file 
+#file.write("\n good morning ") # appended data in new line in the txt file 
+#print(file.read()) # to read the data through terminal
+file.close() # when ever we open the file we should close the file 
