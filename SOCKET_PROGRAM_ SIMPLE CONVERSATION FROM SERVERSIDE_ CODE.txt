@@ -1,0 +1,29 @@
+#====================================SERVER SIDE=======================================
+#====================================AUTHOR-ABHISHEK L=================================
+
+import socket
+
+def Socket_programming():
+
+    host = socket.gethostname()
+    port = 5000
+    server_socket = socket.socket()
+    print("waiting for client to be connected................")
+    server_socket.bind((host,port))
+    server_socket.listen(2)
+    conn, address = server_socket.accept()
+    print("connection from: "+str(address))
+    while True:
+        data = conn.recv(1024).decode()
+        if not data:
+            break
+        print(" reply from connected or client user: " +str(data))
+        data_to_client = input("reply back to client please ")
+        conn.send(data_to_client.encode())
+    conn.close()
+
+
+
+if __name__=="__main__":
+        Socket_programming()
+
