@@ -1,0 +1,19 @@
+#====================Downloading Youtube videos==============================
+#====================AUTHOR-ABHISHEK L=======================================
+
+import pytube
+try:
+
+    def vsongs(url):
+        #url = 'https://www.youtube.com/watch?v=VNNPZXkoPXg'
+        youtube = pytube.YouTube(url)
+        video = youtube.streams.first()
+#video = youtube.streams.get_highest_resolution()
+        video.download('D:/New folder')
+
+except:
+    print("Link error")
+    print("check the internet")
+finally:
+    print("it will take  a while to download so have cup of cofee and comeback!!!!!")
+vsongs('https://www.youtube.com/watch?v=VNNPZXkoPXg')
