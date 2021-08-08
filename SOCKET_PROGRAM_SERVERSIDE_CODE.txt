@@ -1,0 +1,32 @@
+#==========================Server side code=====================================================
+#==========================AUTHOR-ABHISHEK L====================================================
+
+import socket
+
+def Socket_programming():
+    filename = "coffe.txt"
+    host = socket.gethostname()
+    port = 5000
+    server_socket = socket.socket()
+    print("waiting for client to be connected................")
+    server_socket.bind((host,port))
+    server_socket.listen(2)
+    conn, address = server_socket.accept()
+    print("connection from: ",address)
+    while True:
+        data = conn.recv(1024).decode()
+        if not data:
+            break
+        print(" request came from client : ",data)
+        with open(filename,"r") as file:
+            data_to_client = file.read(1024)
+            #while data_to_client:
+            conn.send(data_to_client.encode())
+            print("sent the data please check in your client side  ")
+            #data_to_client = file.read(1024)
+            print("file sent completely")
+    conn.close()
+
+
+Socket_programming()
+

@@ -1,0 +1,31 @@
+#=========================CLIENT SIDE CODE ======================================================================
+#=========================AUTHOR-ABHISHEK L=================================================================
+
+import socket
+
+
+def Client_Programming():
+    host = socket.gethostname()
+    port = 5000
+    client_socket = socket.socket()
+
+    client_socket.connect((host, port))
+    message = (" ak hello please send the file")
+    while message.lower().strip():
+        client_socket.send(message.encode())  # sending  message to server
+        #with open('readfile.txt','w') as file:
+        print("File open ")
+        print("receiving data......")
+        while True:
+                data = client_socket.recv(1024).decode()  # receive response
+                print('Received file from server: ',data)  # show in terminal
+                #if not data:
+                 #   break
+                #file.write(data)
+                print("got the file thanks")
+    client_socket.close()
+
+
+Client_Programming()
+
+
