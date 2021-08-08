@@ -1,0 +1,21 @@
+#===================downloading the youtube videos ,the youtube links which is already present in csv file=================================
+#===================AUTHOR-ABHISHEK L======================================================================================================
+
+
+
+import csv
+import pytube
+try:
+    f = open('urls.csv')
+    csv_f = csv.reader(f)
+    for i in csv_f:
+        print(i[0])
+        youtube = pytube.YouTube(i[0])
+        video = youtube.streams.first()
+        # video = youtube.streams.get_highest_resolution()
+        video.download('D:/New folder/youtubechecking')
+except:
+    print("url error")
+    print("check internet once")
+finally:
+    print("it will take a while")
