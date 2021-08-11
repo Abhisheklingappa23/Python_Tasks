@@ -1,0 +1,26 @@
+''' single class with constructor'''
+'''Author-Abhishek L'''
+
+class alto:
+
+    def __init__(self,color):
+        self.color=color
+
+
+    def variant1(self):  #Method 1
+        print("NO ABS")
+        print("NO REMOTE LOCK")
+        print("HATCHBACK")
+        print("my car color is",self.color)
+
+    def variant2(self): #Method2
+        print("NO ABS")
+        print("yes REMOTE LOCK")
+        print("HATCHBACK")
+        print("my car color is",self.color)
+
+vimal = alto("NAVY-BLUE")
+divya = alto("White")  
+divya.variant1() # calling the variant1(method1) with the help of object-refrence(divya)
+print("\n")
+vimal.variant2() # calling the variant2(method2) with the help of object-refrence(vimal)
