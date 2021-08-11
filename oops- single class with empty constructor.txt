@@ -1,0 +1,20 @@
+''' single class with empty constructor'''
+'''Author-Abhishek L'''
+
+class alto:
+
+    def variant1(self):  #Method 1
+        print("NO ABS")
+        print("NO REMOTE LOCK")
+        print("HATCHBACK")
+
+    def variant2(self): #Method2
+        print("NO ABS")
+        print("yes REMOTE LOCK")
+        print("HATCHBACK")
+
+
+vimal = alto()  # vimal is an First object
+divya = alto()  # divya is  an Second object
+divya.variant1() # calling the variant1(method1) with the help of object-refrence(divya)
+vimal.variant2() # calling the variant2(method2) with the help of object-refrence(vimal)
