@@ -1,0 +1,31 @@
+
+''' Concept of Multiple  Inheritance'''
+'''Author - Abhishek L'''
+class Grandfather:
+    def property(self):
+        print("FARMLAND")
+    def ornaments(self):
+        print("50-grams of gold bracelets")
+
+class Father(Grandfather):           # parent class
+    def property1(self):
+        print("HOME")
+    def  property2(self):
+        print("BAJAJ CHETHAK")
+    def  property3(self):
+        print("RADO watch")
+class Son(Father): # child class which is inheriting the parent class
+
+    def property4(self):
+        print("HERO CYCLE")
+    def property5(self):
+        print("BOOKS,PENS,ETC...")
+
+obj1 = Son()
+obj1.property()
+obj1.ornaments()
+obj1.property1()
+obj1.property2()
+obj1.property3()
+obj1.property4()
+obj1.property5()
