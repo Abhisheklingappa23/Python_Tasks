@@ -1,0 +1,31 @@
+''' concept of over methd riding '''
+'''Author-Abhishek L'''
+
+class Altok10:
+
+    def __init__(self,color):
+        self.color=color
+
+    def variant1(self):  #Method 1
+        print("NO ABS")
+        print("NO REMOTE LOCK")
+        print("HATCHBACK")
+        print("my car color is",self.color)
+
+    def variant2(self): #Method2
+        print("VXI")
+        print("Front poer windows")
+        print("HATCHBACK")
+        print("my car color is",self.color)
+
+class A_star(Altok10):
+
+    def variant2(self): #Method1
+        print("ABS")
+        print("yes REMOTE LOCK")
+        print("HATCHBACK")
+        print("my car color is",self.color)
+        super().variant1()
+
+hmm = A_star("NAVY-BLUE")
+hmm.variant2()
